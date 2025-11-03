@@ -7,6 +7,12 @@ body {
   background-color: #f5f3e7;
 }
 
+img{
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
 .plus-jakarta-sans {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
@@ -21,9 +27,7 @@ header {
   grid-template-columns: 612px 300px;
 }
 
-.image-container{
-  position:relative
-}
+
 
 .ligne-horizontale {
   border: none;
@@ -32,14 +36,7 @@ header {
   background-color: rgb(200, 0, 0);
 }
 
-.ligne-verticale {
-  position: absolute;
-  top:0px;
-  left: 612px;
-  width: 3px;
-  height: calc(200vh - 3px);
-  background-color: rgb(200, 0, 0);
-}
+
 
 .titre {
   display: flex;                
@@ -69,7 +66,7 @@ h1 {
 }
 
 .presentation {
-  width: 612px;
+  /* width: 612px; */
 }
 
 p{
@@ -77,19 +74,17 @@ p{
   padding: 20px;
   color:  rgb(200, 0, 0);
   font-weight: normal;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .informations {
-  position:relative;
-  width: 612px;
   padding-left: 20px;
   padding-right: 20px; 
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color:  rgb(200, 0, 0); 
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .titre-section {
@@ -102,3 +97,18 @@ p{
   text-align: justify;
   font-weight: bold;
 }
+
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.left{
+  border-right: 3px solid rgb(200, 0, 0);
+}
+
+header,hr{
+  grid-column: 1/-1;
+}
+
