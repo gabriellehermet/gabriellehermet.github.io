@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    portfolio en construction 
+  <div class="hero"></div>
+
+  <div class="grid-container">
+    <div class="top-bar">
+      <nav class="header-nav"><a class="h1" href="index.html">GH</a></nav>
+      <a class="button" href="contact.html">À PROPOS</a>
+    </div>
+
+    <div class="grid">
+      <a class="item" href="coffret.html">
+        <img src="img/coffret1.jpg" alt="coffret" width="708" height="501">
+        <p>Coffret d'artiste</p>
+      </a>
+      <a class="item" href="specimen.html"><img src="img/cooper1.jpg" alt="specimen" width="708" height="501">
+        <p>Spécimen typographique</p>
+      </a>
+      <a class="item" href="photo.html"><img src="img/photo1.jpg" alt="photo" width="708" height="501">
+        <p>Édition photo</p>
+      </a>
+      <a class="item" href="cinema.html"><img src="img/cinema1.jpg" alt="cinema" width="708" height="501">
+        <p>Itinéraires graphiques</p>
+      </a>
+      <a class="item" href="grue.html"><img src="img/zoo1.jpg" alt="grue" width="708" height="501">
+        <p>La grue couronnée</p>
+      </a>
+      <a class="item" href="typo.html"><img src="img/typo1.jpg" alt="typo" width="708" height="501">
+        <p>Vaganay</p>
+      </a>
+      <a class="item" href="vinyle.html"><img src="img/vinyle1.jpg" alt="vinyle" width="708" height="501">
+        <p>Vinyles</p>
+      </a>
+      <a class="item" href="dessin.html"><img src="img/dessin1.jpg" alt="dessin" width="708" height="501">
+        <p>Phosphène Onirique</p>
+      </a>
+    </div>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const topBar = document.querySelector(".top-bar");
+      const hero = document.querySelector(".hero");
+
+      if (!topBar || !hero) return;
+
+      function updateTopBarState() {
+        const heroHeight = hero.offsetHeight || window.innerHeight;
+        if (window.scrollY < heroHeight) {
+          topBar.classList.add("on-hero");
+        } else {
+          topBar.classList.remove("on-hero");
+        }
+      }
+
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateTopBarState();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+
+
+      updateTopBarState();
+
+      window.addEventListener("resize", () => {
+        updateTopBarState();
+      });
+    });
+  </script>
 </body>
+
 </html>
