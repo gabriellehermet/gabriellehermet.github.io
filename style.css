@@ -128,7 +128,7 @@ img {
     background: #fff;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .grid {
         grid-template-columns: 1fr;
     }
@@ -150,7 +150,7 @@ img {
     align-items: stretch;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .grid2 {
         grid-template-columns: 1fr;
     }
@@ -173,7 +173,7 @@ img {
     
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .grid3 {
         grid-template-columns: 1fr;
     }
@@ -195,7 +195,7 @@ img {
     align-items: stretch;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .grid4 {
         grid-template-columns: 1fr;
     }
@@ -219,7 +219,7 @@ img {
 
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .grid5 {
         grid-template-columns: 1fr;
     }
@@ -252,7 +252,7 @@ img {
 }
 
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .video {
         max-width: 480px;
     }
@@ -358,7 +358,7 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
     .fiche {
         margin: 20px;
     }
